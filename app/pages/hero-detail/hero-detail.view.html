@@ -1,0 +1,36 @@
+<ion-navbar class="main-navbar" secondary *navbar>
+    <ion-title>{{ hero.name }}</ion-title>
+</ion-navbar>
+<ion-content class="bg-background">
+    <div padding>
+        <ion-segment class="hero-detail-segment" [(ngModel)]="selectedBuild">
+            <ion-segment-button value="hotslogs" *ngIf="hero.hotslogs.length > 0">
+                <div class="inner">
+                    HotS Logs
+                </div>
+            </ion-segment-button>
+            <ion-segment-button value="heroesfire" *ngIf="hero.heroesfire.length > 0">
+                <div class="inner">
+                    Heroesfire
+                </div>
+            </ion-segment-button>
+            <ion-segment-button value="icyveins" *ngIf="hero.icyveins.length > 0">
+                <div class="inner">
+                    Icy-Veins
+                </div>
+            </ion-segment-button>
+        </ion-segment>
+        <ion-row *ngFor="#talent of hero[selectedBuild]" class="talent-row">
+            <ion-col class="talent-row-level">{{ talent.level }}</ion-col>
+            <ion-col class="talent-row-icon">
+                <div class="talent-icon-frame">
+                    <img [src]="talent.icon" alt="{{ talent.talent }}" class="talent-icon" />
+                </div>
+            </ion-col>
+            <ion-col class="talent-row-overview">
+                <p class="talent-row-name">{{ talent.talent }}</p>
+                <p class="talent-row-text">{{ talent.text }}</p>
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-content>

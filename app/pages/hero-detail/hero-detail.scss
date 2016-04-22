@@ -1,0 +1,50 @@
+.talent-row {
+    margin-bottom: 15px;
+
+    .talent-row-level {
+        display: flex;
+        color: #fff;
+        flex: 0;
+        font-family: 'HeroesFont-Bold';
+        text-align: center;
+        min-width: 30px;
+    }
+
+    .talent-row-icon {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex: 0.5;
+    }
+
+    .talent-row-overview {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    .talent-row-name {
+        font-family: 'HeroesFont-Bold';
+        color: #fff;
+        margin: 0;
+        font-size: 1.65rem;
+    }
+
+    .talent-row-text {
+        font-family: 'HeroesFont';
+        font-size: 12px;
+        color: #8EB1BC;
+        margin: 0;
+    }
+
+
+}
+
+
+.talent-icon {
+    border: 2px solid rgba(57, 83, 190, 0.48);
+    height: 64px;
+    width: 64px;
+    border-radius: 10px;
+}
+

@@ -1,0 +1,105 @@
+@font-face {
+  font-family: 'HeroesFont';
+  src: url('fonts/MetronicforBlizzard.woff') format('woff'), /* Pretty Modern Browsers */
+}
+
+@font-face {
+  font-family: 'HeroesFont-Bold';
+  src: url('fonts/MetronicforBlizzard-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+}
+
+@import '../pages/hero-detail/hero-detail';
+
+.bg-background {
+    background: linear-gradient(to top,#0e0520,#1b1146)
+}
+
+.dark-toolbar {
+    .toolbar-background {
+        background: #0E001A;
+        border: 0;
+    }
+}
+
+.main-navbar[secondary] {
+
+    .toolbar-background {
+        border-bottom: 3px solid #150C35;
+        background: url('images/toolbar-bg.png');
+        background-size: cover;
+    }
+
+    .toolbar-title {
+        font-family: 'HeroesFont-Bold';
+        color: #fff;
+        text-shadow: 0 0 10px rgba(12, 155, 246, 0.59);
+        text-transform: uppercase;
+    }
+
+    .back-button {
+        font-family: 'HeroesFont';
+        // text-transform: uppercase;
+        color: #b08ade;
+    }
+
+    .back-button-icon {
+        font-size: 2.6rem;
+    }
+}
+
+.dark-list-item {
+    background: transparent;
+    color: #fff;
+
+    ion-avatar img {
+        max-width: 4rem;
+        max-height: 4rem;
+        border-radius: 1.8rem;
+        border: 2px solid rgba(57, 83, 190, 0.48);
+    }
+
+    &:last-child {
+        border-bottom: 1px solid #43286B !important;
+    }
+
+    .item-inner {
+        border-bottom: 1px solid #43286B;
+    }
+
+    p {
+        color: #8eb1bc;
+    }
+
+    ion-label h2 {
+        text-transform: uppercase;
+        font-family: 'HeroesFont-Bold';
+    }
+
+    &.activated {
+        background: darken(#150B34, 10);
+    }
+}
+
+.hero-detail-segment {
+
+    .segment-button {
+        height: auto;
+        padding: 2px;
+        border: 0;
+        font-family: 'HeroesFont-Bold';
+        &:first-of-type, :last-of-type {
+            border-radius: 0;
+        }
+    }
+    .segment-activated {
+        background-color: #8332cd;
+        background-image: linear-gradient(#046bb3,#8332cd);
+        .inner {
+            text-shadow: 0 0 1rem #009cff;
+            background-color: #091e51;
+            font-weight: 700;
+            color: #fff;
+            background-image: linear-gradient(#091e51,#2a1461);
+        }
+    }
+}
